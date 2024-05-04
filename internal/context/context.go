@@ -47,6 +47,9 @@ type AusfUeContext struct {
 	Rand     string
 	EapID    uint8
 	Resynced bool
+
+	// for EAP-TLS
+	TLScontext *TLSContext
 }
 
 type SuciSupiMap struct {
@@ -67,6 +70,7 @@ type EapAkaPrimePkt struct {
 }
 
 const (
+	EAP_TLS_TYPENUM       = 13
 	EAP_AKA_PRIME_TYPENUM = 50
 )
 
